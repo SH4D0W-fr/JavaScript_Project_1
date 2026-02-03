@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur numérique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Bienvenue sur le convertisseur numérique 4.0</h1>
+		<div>
+			<h2>Entrées :</h2>
+			<form id="convertForm" novalidate>
+                <div class="select-grid">
+                    <div class="select-item">
+                        <label for="base10">Base 10 (Décimal)</label>
+                        <input type="number" name="base10" id="base10" required />
+                    </div>
+                    <div class="select-item">
+                        <label for="base2">Base 2 (Binaire)</label>
+                            <input type="number" name="base2" id="base2" required />
+                    </div>
+                    <div class="select-item">
+                        <label for="base16">Base 16 (Hexadécimal)</label>
+                        <label for="base16">Pseudo</label>
+                            <input type="text" name="base16" id="base16" required />
+                    </div>
+                  
+                </div>
+               
+				<p>
+					<button type="submit">Valider</button>
+				</p>
+			</form>
+			<p id="reponse" aria-live="polite"></p>
+		</div>
+	
+	<script src="matrix.js"></script>
+</body>
+</html>
