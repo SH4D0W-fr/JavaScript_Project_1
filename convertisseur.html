@@ -10,38 +10,36 @@
     <canvas id="canv"></canvas>
     <div class="header">
         <div class="nav">
-            <button><a href="index.html">Accueil</a></button>
+            <a href="index.html"><button>Accueil</button></a>
             <p>Synergy - Convertisseur</p>
-            <button><a href="qcm.html">QCM</a></button>
+            <a href="qcm.html"><button>QCM</button></a>
         </div>
     </div>
     <div class="convert-container">
-            <h1>Convertisseur</h1>
-			<h2>Entrées :</h2>
-			<form id="convertForm" novalidate>
-                <div class="select-grid">
-                    <div class="select-item">
-                        <label for="decimal">Base 10 (Décimal)</label>
-                        <input type="number" name="decimal" id="decimal" required />
-                    </div>
-                    <div class="select-item">
-                        <label for="binary">Base 2 (Binaire)</label>
-                        <input type="number" name="binary" id="binary" required />
-                    </div>
-                    <div class="select-item">
-                        <label for="hexadecimal">Base 16 (Hexadécimal)</label>
-                        <input type="text" name="hexadecimal" id="hexadecimal" required />
-                    </div>
-                  
+        <h1>Convertisseur</h1>
+        <h2>Entrées :</h2>
+        <form id="convertForm" novalidate>
+            <div class="select-grid">
+                <div class="select-item">
+                    <label for="decimal">Base 10 (Décimal)</label>
+                    <input type="number" name="decimal" id="decimal" required />
                 </div>
-			</form>
-			<p id="reponse" aria-live="polite"></p>
-		</div>
+                <div class="select-item">
+                    <label for="binary">Base 2 (Binaire)</label>
+                    <input type="number" name="binary" id="binary" required />
+                </div>
+                <div class="select-item">
+                    <label for="hexadecimal">Base 16 (Hexadécimal)</label>
+                    <input type="text" name="hexadecimal" id="hexadecimal" required />
+                </div>
+            </div>
+        </form>
+        <p id="reponse" aria-live="polite"></p>
+    </div>
     <div class="footer">
         <p>© 2026 Synergy. Tous droits réservés.</p>
-    </div> 
-	
-	<script src="script/matrix.js"></script>
+    </div>
+    <script src="script/matrix.js"></script>
     <script src="script/convertisseur.js"></script>
 </body>
 </html>

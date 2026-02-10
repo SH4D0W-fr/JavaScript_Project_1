@@ -1,3 +1,5 @@
+// Ce code a été généré par une IA à cause de sa complexité. Il gère l'effet matrix en arrière plan
+
 const canvas = document.getElementById('canv');
 const ctx = canvas.getContext('2d');
 

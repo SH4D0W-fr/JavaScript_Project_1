@@ -1,3 +1,5 @@
+// On utilise le code fourni pour le convertisseur
+
 (function () {
   var SgConverter = function () {
     var that = this;
@@ -51,9 +53,8 @@
     sgConverter.converters.forEach(function (converter) {
       sgConverter.inputElements[converter] = document.getElementById(converter);
       ['keyup', 'change'].forEach(function (event) {
-        document.getElementById(converter).addEventListener(event, sgConverter.update, false);
+        document.getElementById(converter).addEventListener(event, sgConverter.update, false); // On fait un sorte que les valeurs sont calculées en temps réel
       });
     });
   });
 }()); 
-
