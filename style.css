@@ -177,7 +177,7 @@ body {
   font-weight: 600;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Media query pour les écrans de moins de 768px de large (tablettes et mobiles) */
   .side-panel {
     top: auto;
     bottom: 12vh; /* au-dessus du footer sur mobile */
