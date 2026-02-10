@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM - Synergy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="canv"></canvas>
+    <div class="header">
+        <div class="nav">
+            <button><a href="index.html">Accueil</a></button>
+            <p>Synergy - QCM</p>
+            <button><a href="convertisseur.html">Convertisseur</a></button>
+        </div>
+    </div>
+    <div id="qcm-container">
+        <h1>QCM :</h1>
+        <div id="questions">
+            <form name="qcm-form">
+                <div id="qcm-questions">
+                    <div class="question">
+                        <p class="question-text">1- Quelle est la complexité en pire cas du tri rapide (quicksort) ?</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="1" value="A"><span>A. O(n)</span></label>
+                            <label class="qcm-option"><input type="radio" name="1" value="B"><span>B. O(n log n)</span></label>
+                            <label class="qcm-option"><input type="radio" name="1" value="C"><span>C. O(n²)</span></label>
+                            <label class="qcm-option"><input type="radio" name="1" value="D"><span>D. O(log n)</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">2- Quel est l’avantage principal d’un arbre AVL par rapport à un BST classique ?</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="2" value="A"><span>A. Il utilise moins de mémoire</span></label>
+                            <label class="qcm-option"><input type="radio" name="2" value="B"><span>B. Il garantit un équilibre logarithmique</span></label>
+                            <label class="qcm-option"><input type="radio" name="2" value="C"><span>C. Il supprime les doublons</span></label>
+                            <label class="qcm-option"><input type="radio" name="2" value="D"><span>D. Il ne nécessite pas de rotations</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">3- Dans un automate fini déterministe (AFD), une transition est définie par…</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="3" value="A"><span>A. Un état et plusieurs symboles</span></label>
+                            <label class="qcm-option"><input type="radio" name="3" value="B"><span>B. Un état et un symbole</span></label>
+                            <label class="qcm-option"><input type="radio" name="3" value="C"><span>C. Plusieurs états et un symbole</span></label>
+                            <label class="qcm-option"><input type="radio" name="3" value="D"><span>D. Une expression régulière</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">4- Quel est le rôle d’un compilateur ?</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="4" value="A"><span>A. Exécuter le code ligne par ligne</span></label>
+                            <label class="qcm-option"><input type="radio" name="4" value="B"><span>B. Traduire le code source en code machine avant exécution</span></label>
+                            <label class="qcm-option"><input type="radio" name="4" value="C"><span>C. Optimiser le réseau</span></label>
+                            <label class="qcm-option"><input type="radio" name="4" value="D"><span>D. Gérer les processus</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">5- Quel protocole assure le routage sur Internet ?</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="5" value="A"><span>A. TCP</span></label>
+                            <label class="qcm-option"><input type="radio" name="5" value="B"><span>B. UDP</span></label>
+                            <label class="qcm-option"><input type="radio" name="5" value="C"><span>C. IP</span></label>
+                            <label class="qcm-option"><input type="radio" name="5" value="D"><span>D. DNS</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">6- Dans un modèle relationnel, une clé étrangère sert à…</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="6" value="A"><span>A. Identifier une ligne de manière unique</span></label>
+                            <label class="qcm-option"><input type="radio" name="6" value="B"><span>B. Assurer l’intégrité référentielle entre deux tables</span></label>
+                            <label class="qcm-option"><input type="radio" name="6" value="C"><span>C. Accélérer les requêtes</span></label>
+                            <label class="qcm-option"><input type="radio" name="6" value="D"><span>D. Définir un index</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">7- Quel est le résultat de la requête SQL : SELECT COUNT(*) FROM Eleves WHERE note &gt; 15 ?</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="7" value="A"><span>A. La somme des notes &gt; 15</span></label>
+                            <label class="qcm-option"><input type="radio" name="7" value="B"><span>B. Le nombre d’élèves ayant une note &gt; 15</span></label>
+                            <label class="qcm-option"><input type="radio" name="7" value="C"><span>C. La moyenne des notes &gt; 15</span></label>
+                            <label class="qcm-option"><input type="radio" name="7" value="D"><span>D. Les noms des élèves concernés</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">8- En programmation fonctionnelle, une fonction est dite “pure” si…</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="8" value="A"><span>A. Elle utilise des boucles</span></label>
+                            <label class="qcm-option"><input type="radio" name="8" value="B"><span>B. Elle n’a pas d’effets de bord et dépend uniquement de ses arguments</span></label>
+                            <label class="qcm-option"><input type="radio" name="8" value="C"><span>C. Elle modifie des variables globales</span></label>
+                            <label class="qcm-option"><input type="radio" name="8" value="D"><span>D. Elle retourne plusieurs valeurs</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">9- Quel est le rôle de la pile d’exécution ?</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="9" value="A"><span>A. Stocker les fichiers</span></label>
+                            <label class="qcm-option"><input type="radio" name="9" value="B"><span>B. Gérer les appels de fonctions et leurs contextes</span></label>
+                            <label class="qcm-option"><input type="radio" name="9" value="C"><span>C. Optimiser la mémoire vive</span></label>
+                            <label class="qcm-option"><input type="radio" name="9" value="D"><span>D. Gérer les processus concurrents</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">10- Dans un réseau, le protocole ARP permet…</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="10" value="A"><span>A. De chiffrer les paquets</span></label>
+                            <label class="qcm-option"><input type="radio" name="10" value="B"><span>B. De trouver le routeur le plus proche</span></label>
+                            <label class="qcm-option"><input type="radio" name="10" value="C"><span>C. D’associer une IP à une adresse MAC</span></label>
+                            <label class="qcm-option"><input type="radio" name="10" value="D"><span>D. De vérifier l’intégrité des données</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">11- Quelle est l’écriture binaire du nombre décimal 13 ?</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="11" value="A"><span>A. 1100</span></label>
+                            <label class="qcm-option"><input type="radio" name="11" value="B"><span>B. 1101</span></label>
+                            <label class="qcm-option"><input type="radio" name="11" value="C"><span>C. 1011</span></label>
+                            <label class="qcm-option"><input type="radio" name="11" value="D"><span>D. 1110</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">12- Combien de valeurs différentes peut-on coder avec 8 bits ?</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="12" value="A"><span>A. 8</span></label>
+                            <label class="qcm-option"><input type="radio" name="12" value="B"><span>B. 16</span></label>
+                            <label class="qcm-option"><input type="radio" name="12" value="C"><span>C. 128</span></label>
+                            <label class="qcm-option"><input type="radio" name="12" value="D"><span>D. 256</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">13- Que vaut x après l’exécution du code suivant ?<br/>x = 5 puis x = x + 3</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="13" value="A"><span>A. 3</span></label>
+                            <label class="qcm-option"><input type="radio" name="13" value="B"><span>B. 5</span></label>
+                            <label class="qcm-option"><input type="radio" name="13" value="C"><span>C. 8</span></label>
+                            <label class="qcm-option"><input type="radio" name="13" value="D"><span>D. 15</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">14- Quel mot-clé permet de tester une condition en Python ?</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="14" value="A"><span>A. test</span></label>
+                            <label class="qcm-option"><input type="radio" name="14" value="B"><span>B. if</span></label>
+                            <label class="qcm-option"><input type="radio" name="14" value="C"><span>C. while</span></label>
+                            <label class="qcm-option"><input type="radio" name="14" value="D"><span>D. for</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">15- Combien de fois le message « NSI » est-il affiché ?<br/>for i in range(3): print("NSI")</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="15" value="A"><span>A. 2</span></label>
+                            <label class="qcm-option"><input type="radio" name="15" value="B"><span>B. 3</span></label>
+                            <label class="qcm-option"><input type="radio" name="15" value="C"><span>C. 4</span></label>
+                            <label class="qcm-option"><input type="radio" name="15" value="D"><span>D. 5</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">16- Que renvoie l’instruction suivante ? L = [2, 4, 6, 8]; L[1]</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="16" value="A"><span>A. 2</span></label>
+                            <label class="qcm-option"><input type="radio" name="16" value="B"><span>B. 4</span></label>
+                            <label class="qcm-option"><input type="radio" name="16" value="C"><span>C. 6</span></label>
+                            <label class="qcm-option"><input type="radio" name="16" value="D"><span>D. 8</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">17- Quel est le but principal d’un algorithme ?</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="17" value="A"><span>A. Décorer un programme</span></label>
+                            <label class="qcm-option"><input type="radio" name="17" value="B"><span>B. Stocker des données</span></label>
+                            <label class="qcm-option"><input type="radio" name="17" value="C"><span>C. Résoudre un problème étape par étape</span></label>
+                            <label class="qcm-option"><input type="radio" name="17" value="D"><span>D. Créer des images</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">18- Quel algorithme est en général le plus rapide ?</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="18" value="A"><span>A. Tester toutes les valeurs une par une</span></label>
+                            <label class="qcm-option"><input type="radio" name="18" value="B"><span>B. Recherche dichotomique sur une liste triée</span></label>
+                            <label class="qcm-option"><input type="radio" name="18" value="C"><span>C. Recherche aléatoire</span></label>
+                            <label class="qcm-option"><input type="radio" name="18" value="D"><span>D. Répéter la recherche plusieurs fois</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">19- Que signifie IP dans une adresse IP ?</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="19" value="A"><span>A. Internet Provider</span></label>
+                            <label class="qcm-option"><input type="radio" name="19" value="B"><span>B. Internal Protocol</span></label>
+                            <label class="qcm-option"><input type="radio" name="19" value="C"><span>C. Internet Protocol</span></label>
+                            <label class="qcm-option"><input type="radio" name="19" value="D"><span>D. Information Path</span></label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">20- Quel type de donnée est True en Python ?</p>
+                        <div class="options">
+                            <label class="qcm-option"><input type="radio" name="20" value="A"><span>A. int</span></label>
+                            <label class="qcm-option"><input type="radio" name="20" value="B"><span>B. str</span></label>
+                            <label class="qcm-option"><input type="radio" name="20" value="C"><span>C. bool</span></label>
+                            <label class="qcm-option"><input type="radio" name="20" value="D"><span>D. float</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <input type="button" id="corrections-btn" value="Corriger">
+                </div>
+                <div id="qcm-feedback">
+                    <p id="score-output">Clique sur « Corriger » pour afficher ta note.</p>
+                    <div id="corrections-output"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2026 Synergy. Tous droits réservés.</p>
+    </div>
+    <script src="script/qcm.js" defer></script>
+    <script src="script/matrix.js"></script>
+</body>
+</html>

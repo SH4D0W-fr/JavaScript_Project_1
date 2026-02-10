@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap');
 
+/* On défini les couleurs et les polices selon la DA du site */
 :root {
   --background: #2c2b2b;
   --background-secondary: #050301;
@@ -9,6 +10,7 @@
   --accent: #AC1818;
   --success:#3DDC97;
   --error: #E04F5F;
+  --answer: #F4D35E;
 
   --main-font: "Inclusive Sans";
 }
@@ -25,6 +27,7 @@ body {
   background: linear-gradient(135deg, var(--background) 50%, var(--background-secondary) 50%);
 }
 
+/* On défini le canva pour l'animation de fond (# pour utiliser id au lieu de class) */
 #canv {
   position: fixed;
   inset: 0;
@@ -249,4 +252,147 @@ body {
 
 .convert-container button:hover {
   transform: translateX(-4px);
+}
+
+#qcm-container {
+  position: relative;
+  z-index: 1;
+  margin: 6vh auto 14vh;
+  width: min(840px, 92vw);
+  padding: 4vh 4vw 5vh;
+  border-radius: 16px;
+  background-color: color-mix(in srgb, var(--background-secondary) 70%, transparent);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  color: var(--primary);
+  font-family: var(--main-font);
+  max-height: calc(100vh - 260px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) color-mix(in srgb, var(--background) 80%, transparent);
+}
+
+#qcm-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+#qcm-container::-webkit-scrollbar-track {
+  background: color-mix(in srgb, var(--background) 80%, transparent);
+  border-radius: 10px;
+}
+
+#qcm-container::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 10px;
+}
+
+#qcm-container h1 {
+  margin: 0 0 2vh 0;
+}
+
+#qcm-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+#qcm-questions .question {
+  padding: 2vh 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--secondary) 30%, transparent);
+}
+
+#qcm-questions .question:last-of-type {
+  border-bottom: none;
+}
+
+.question-text {
+  margin: 0 0 1vh 0;
+  font-weight: 600;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.75rem;
+}
+
+.qcm-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background-color: color-mix(in srgb, var(--background) 70%, transparent);
+  border: 1px solid color-mix(in srgb, var(--secondary) 35%, transparent);
+  cursor: pointer;
+  transition: border-color 200ms ease, transform 200ms ease;
+}
+
+.qcm-option:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.qcm-option input[type="radio"] {
+  accent-color: var(--accent);
+  transform: scale(1.2);
+}
+
+.qcm-option.correct {
+  border-color: var(--success);
+  background-color: color-mix(in srgb, var(--success) 25%, transparent);
+}
+
+.qcm-option.wrong {
+  border-color: var(--error);
+  background-color: color-mix(in srgb, var(--error) 20%, transparent);
+}
+
+.qcm-option.answer {
+  border-color: var(--answer);
+  background-color: color-mix(in srgb, var(--answer) 25%, transparent);
+}
+
+#qcm-container input[type="button"] {
+  margin-top: 3vh;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--accent);
+  color: var(--primary);
+  font-family: var(--main-font);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+}
+
+#qcm-container input[type="button"]:hover {
+  transform: translateY(-2px);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2vh;
+}
+
+#qcm-feedback {
+  margin-top: 2vh;
+  padding: 1.5vh 2vw;
+  border-radius: 12px;
+  background-color: color-mix(in srgb, var(--background) 75%, transparent);
+  border: 1px solid color-mix(in srgb, var(--secondary) 25%, transparent);
+}
+
+#qcm-feedback p {
+  margin: 0 0 0.75rem 0;
+}
+
+#corrections-output ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+#corrections-output li {
+  margin-bottom: 0.4rem;
 }
