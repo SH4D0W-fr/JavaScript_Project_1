@@ -3,38 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convertisseur numérique</title>
+    <title>Convertisseur - Synergy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Bienvenue sur le convertisseur numérique 4.0</h1>
-		<div>
+    <canvas id="canv"></canvas>
+    <div class="header">
+        <div class="nav">
+            <button><a href="index.html">Accueil</a></button>
+            <p>Synergy - Convertisseur</p>
+            <button><a href="qcm.html">QCM</a></button>
+        </div>
+    </div>
+    <div class="convert-container">
+            <h1>Convertisseur</h1>
 			<h2>Entrées :</h2>
 			<form id="convertForm" novalidate>
                 <div class="select-grid">
                     <div class="select-item">
-                        <label for="base10">Base 10 (Décimal)</label>
-                        <input type="number" name="base10" id="base10" required />
+                        <label for="decimal">Base 10 (Décimal)</label>
+                        <input type="number" name="decimal" id="decimal" required />
                     </div>
                     <div class="select-item">
-                        <label for="base2">Base 2 (Binaire)</label>
-                            <input type="number" name="base2" id="base2" required />
+                        <label for="binary">Base 2 (Binaire)</label>
+                        <input type="number" name="binary" id="binary" required />
                     </div>
                     <div class="select-item">
-                        <label for="base16">Base 16 (Hexadécimal)</label>
-                        <label for="base16">Pseudo</label>
-                            <input type="text" name="base16" id="base16" required />
+                        <label for="hexadecimal">Base 16 (Hexadécimal)</label>
+                        <input type="text" name="hexadecimal" id="hexadecimal" required />
                     </div>
                   
                 </div>
-               
-				<p>
-					<button type="submit">Valider</button>
-				</p>
 			</form>
 			<p id="reponse" aria-live="polite"></p>
 		</div>
+    <div class="footer">
+        <p>© 2026 Synergy. Tous droits réservés.</p>
+    </div> 
 	
-	<script src="matrix.js"></script>
+	<script src="script/matrix.js"></script>
+    <script src="script/convertisseur.js"></script>
 </body>
 </html>
